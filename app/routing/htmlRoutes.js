@@ -1,8 +1,9 @@
-//routes that sends the user the html page
-app.get("/", function(req, res){
+//routes that displays a JSON of all possible friends
+app.get("/api/friends", function(req, res){
     res.sendFile(path.join(_dirname, "public/home.html"));
 });
 
-app.get("/survey", function(req, res){
+//routes that post survey result
+app.post("/api/friends", function(req, res){
     res.sendFile(path.join(__dirname, "public/survey.html"))
 })
