@@ -1,6 +1,6 @@
 
 //friends data
-var friendsArray = [
+var friends = [
     {
         "name": "Iron Man",
         "photo": "https://www.androidcentral.com/sites/androidcentral.com/files/styles/xlarge/public/article_images/2019/04/iron-man-hero.jpg?itok=p_FyPlSG",
@@ -106,5 +106,5 @@ var friendsArray = [
 ];
 
 //Export the array. This makes it accessible to other files using require.
-module.exports = friendsArray;
+module.exports = friends;
 
