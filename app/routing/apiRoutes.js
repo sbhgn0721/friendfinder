@@ -9,9 +9,9 @@ app.get("/api/friends", function (req, res) {
 });
 
 app.post("/api/friends", function (req, res) {
-    let userScore = req.body.scores;
-        const scoresArr = [];
-        let bestMatch = 0;
+    var userScore = req.body.scores;
+        var scoresArr = [];
+        var bestMatch = 0;
 
 
         for (var i = 0; i < friendsData.length; i++) {
@@ -22,16 +22,16 @@ app.post("/api/friends", function (req, res) {
             scoresArr.push(scoreDiff);
         }
 
-        // loop through ours scoresArr
+        // loop through scoresArr
         for (var i = 0; i < scoresArr.length; i++) {
             if (scoresArr[i] <= scoresArr[bestMatch]) {
                 bestMatch = i;
             }
         }
 
-        // return the best match
-        let soulMate = friendsData[bestMatch];
-        res.json(soulMate);
+        // get the best match
+        var bestFriend = friendsData[bestMatch];
+        res.json(bestFriend);
         friendsData.push(req.body)
 
 
